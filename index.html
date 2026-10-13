@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oma's kookboek komt eraan · Thuis bij Opa en Oma</title>
+<meta name="description" content="Oma's kookboek komt eraan. Schrijf je in en hoor als eerste wanneer je het kunt bestellen. Als bedankje: drie herfstrecepten van oma.">
+<link rel="canonical" href="https://thuisbijopaenoma.nl/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thuisbijopaenoma.nl/">
+<meta property="og:title" content="Oma's kookboek komt eraan">
+<meta property="og:description" content="Schrijf je in en hoor als eerste wanneer je het kookboek van opa en oma kunt bestellen.">
+<meta property="og:image" content="https://thuisbijopaenoma.nl/img/stilleven-1200.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,400&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #fbf8f0;
+    --card: #ffffff;
+    --ink: #3a2a26;
+    --muted: #7a6560;
+    --line: #e7d9c8;
+    --accent: #995e4f;
+    --accent-dark: #7d4a3d;
+    --cta: #b4501f;
+    --cta-dark: #963f15;
+    --soep: #c9631a;
+    --lunch: #b07a0c;
+    --hoofd: #2b5c9e;
+    --toetje: #c8243b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--paper); color: var(--ink); font: 400 17px/1.6 Fraunces, Georgia, serif; -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: var(--accent); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+  .script { font-family: Caveat, cursive; font-weight: 700; color: var(--accent); }
+  .kicker { font-size: 12px; letter-spacing: .3em; text-transform: uppercase; font-weight: 600; color: var(--accent); }
+  h1, h2 { font-weight: 800; letter-spacing: -.015em; line-height: 1.05; }
+  h2 { font-size: clamp(30px, 5.5vw, 44px); margin-top: 8px; }
+
+  /* top */
+  .top { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; }
+  .brand { font-weight: 800; font-size: 19px; text-decoration: none; color: var(--ink); }
+  .brand .script { font-size: 24px; margin-right: 2px; }
+
+  /* hero */
+  .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; padding: 40px 0 72px; }
+  .hero h1 { font-size: clamp(40px, 7vw, 66px); margin: 14px 0 18px; }
+  .hero h1 .script { display: block; font-size: .78em; font-weight: 700; letter-spacing: 0; margin-bottom: 4px; }
+  .hero .lead { font-size: 19px; color: var(--muted); max-width: 32ch; }
+  .hero .lead b { color: var(--ink); font-weight: 600; }
+  .bonus { margin-top: 18px; padding: 12px 16px; background: var(--card); border: 1px dashed var(--accent); border-radius: 12px; font-size: 15.5px; color: var(--muted); max-width: 480px; }
+  .bonus b { color: var(--accent); }
+  .visual { position: relative; padding-bottom: 40px; }
+  .visual .main { border-radius: 22px; }
+  .visual .mini { position: absolute; right: -10px; bottom: 0; width: 34%; transform: rotate(4deg); }
+  .visual .mini img { border-radius: 3px; background: #fff; box-shadow: 0 2px 4px rgba(58,42,38,.1), 0 18px 36px -10px rgba(58,42,38,.4); }
+  .visual .mini figcaption { position: absolute; top: -14px; left: -18px; background: var(--cta); color: #fff; font-family: Caveat, cursive; font-weight: 700; font-size: 19px; padding: 2px 12px; border-radius: 999px; transform: rotate(-8deg); white-space: nowrap; }
+  .cover { position: relative; justify-self: center; width: min(360px, 100%); }
+  .cover img { border-radius: 4px; box-shadow: 0 2px 4px rgba(58,42,38,.08), 0 24px 50px -12px rgba(58,42,38,.35); transform: rotate(2.5deg); background: #fff; }
+  .cover .badge { position: absolute; top: -18px; left: -22px; width: 104px; height: 104px; border-radius: 50%; background: var(--cta); color: #fff; display: grid; place-items: center; text-align: center; transform: rotate(-10deg); box-shadow: 0 8px 20px -6px rgba(150,63,21,.5); font-size: 12px; font-weight: 800; letter-spacing: .14em; line-height: 1.15; text-transform: uppercase; }
+  .cover .badge big { display: block; font-family: Caveat, cursive; font-size: 30px; letter-spacing: 0; text-transform: none; }
+
+  /* form */
+  form.signup { margin-top: 28px; max-width: 480px; }
+  .row { display: flex; gap: 8px; background: var(--card); border: 2px solid var(--line); border-radius: 14px; padding: 6px; transition: border-color .15s; }
+  .row:focus-within { border-color: var(--accent); }
+  .row input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; padding: 12px 12px; font: inherit; font-size: 17px; color: var(--ink); }
+  .row button { border: 0; border-radius: 10px; background: var(--cta); color: #fff; font: 600 16px/1 Fraunces, Georgia, serif; padding: 0 20px; cursor: pointer; white-space: nowrap; transition: background .15s; }
+  .row button:hover { background: var(--cta-dark); }
+  .row button:disabled { opacity: .7; cursor: wait; }
+  .fine { font-size: 13.5px; color: var(--muted); margin-top: 10px; }
+  .msg { display: none; margin-top: 14px; padding: 14px 16px; border-radius: 12px; font-size: 16px; }
+  .msg.ok { display: block; background: #eef4e8; color: #2f5a22; }
+  .msg.err { display: block; background: #fbe4e8; color: #8c2f2d; }
+  .proof { margin-top: 18px; font-size: 15px; color: var(--muted); }
+  .proof b { color: var(--ink); }
+
+  /* sections */
+  section.blok { padding: 72px 0; border-top: 1px solid var(--line); }
+  .center { text-align: center; }
+  .intro { max-width: 600px; margin: 14px auto 0; color: var(--muted); font-size: 18px; }
+
+  .recepten { display: grid; grid-template-columns: repeat(3, 1fr); max-width: 860px; margin-left: auto; margin-right: auto; gap: 18px; margin-top: 40px; }
+  .rc { background: var(--card); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; }
+  .rc img { aspect-ratio: 1; object-fit: cover; background: var(--paper); }
+  .rc .t { padding: 16px 18px 20px; border-top: 4px solid var(--c); }
+  .rc .k { font-size: 11px; letter-spacing: .25em; text-transform: uppercase; font-weight: 800; color: var(--c); }
+  .rc h3 { font-size: 20px; font-weight: 800; line-height: 1.15; margin: 6px 0 8px; hyphens: auto; overflow-wrap: break-word; }
+  .rc p { font-family: Caveat, cursive; font-size: 21px; line-height: 1.1; color: var(--muted); }
+
+  .boek { display: grid; grid-template-columns: 1.2fr .8fr; gap: 48px; align-items: center; }
+  .boek p { color: var(--muted); font-size: 18px; margin-top: 14px; }
+  .feat { list-style: none; display: grid; gap: 12px; }
+  .feat li { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px; font-size: 17px; color: var(--muted); }
+  .feat b { color: var(--ink); }
+
+  .over { display: grid; grid-template-columns: .95fr 1.05fr; gap: 48px; align-items: center; }
+  .over.solo { grid-template-columns: 1fr; max-width: 680px; text-align: center; }
+  .over figure img { border-radius: 18px; }
+  .over figure figcaption { font-family: Caveat, cursive; font-size: 20px; color: var(--muted); text-align: center; margin-top: 8px; }
+  .over p { font-size: 18px; color: var(--muted); margin-top: 14px; }
+  .over blockquote { font-family: Caveat, cursive; font-size: 30px; line-height: 1.1; color: var(--accent); margin-top: 20px; }
+
+
+  .slot { background: var(--accent); color: #fff; border-radius: 28px; padding: 56px 24px; text-align: center; margin: 72px 0; }
+  .slot .kicker { color: #f3d9cc; }
+  .slot h2 { color: #fff; }
+  .slot p { color: #f3e4dc; max-width: 46ch; margin: 12px auto 0; font-size: 18px; }
+  .slot form.signup { margin: 26px auto 0; }
+  .slot .row { border-color: transparent; }
+  .slot .fine { color: #f3d9cc; }
+  .slot .fine a { color: #fff; }
+
+  footer { border-top: 1px solid var(--line); padding: 28px 0 40px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 14px; color: var(--muted); }
+
+  @media (max-width: 860px) {
+    .hero, .boek, .over { grid-template-columns: 1fr; gap: 36px; }
+    .hero { padding-top: 16px; }
+    .visual .mini { right: 4px; width: 30%; }
+    .recepten { grid-template-columns: 1fr; max-width: 420px; }
+    .rc img { aspect-ratio: 16 / 10; }
+  }
+  @media (max-width: 480px) {
+    .row { flex-direction: column; }
+    .brand { font-size: 16px; }
+    .brand .script { font-size: 20px; }
+      .hero h1 { margin: 10px 0 12px; }
+    .row button { padding: 15px; }
+    .rc h3 { font-size: 17px; }
+    .rc p { font-size: 18px; }
+    .feat { grid-template-columns: 1fr; }
+    section.blok { padding: 56px 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#"><span class="script">Thuis bij</span> Opa en Oma</a>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <div class="kicker">Thuis bij opa en oma · het kookboek</div>
+      <h1><span class="script">Binnenkort te bestellen:</span>Het kookboek van oma</h1>
+      <p class="lead">Ruim 60 recepten die opa en oma echt elke week maken, met bij elk gerecht een verhaal van vroeger. <b>Schrijf je in en hoor als eerste</b> wanneer je het boek kunt bestellen.</p>
+
+      <form class="signup" novalidate>
+        <div class="row">
+          <input type="email" name="email_address" required autocomplete="email" placeholder="jouw@email.nl" aria-label="E-mailadres">
+          <button type="submit">Zet mij op de lijst</button>
+        </div>
+        <p class="fine">Je krijgt mails over oma's kookboek. Afmelden kan altijd. <a href="privacy.html">Privacy</a></p>
+        <div class="msg" role="status"></div>
+      </form>
+
+      <p class="bonus"><b>Bedankje van oma:</b> na je inschrijving krijg je meteen drie van haar herfstrecepten in je mail.</p>
+      <p class="proof">Meer dan <b>360.000 volgers</b> op onze kanalen samen</p>
+    </div>
+
+    <div class="visual">
+      <!-- Vervang door een echte foto van opa en oma in de keuken: img/opa-oma.jpg -->
+      <img class="main" src="img/stilleven-1200.jpg" fetchpriority="high" alt="Herfst op de keukentafel van oma" width="1200" height="904">
+      <figure class="mini">
+        <img src="img/cover.jpg" alt="Het gratis boekje Herfst bij Oma" width="910" height="1287">
+        <figcaption>+ gratis bedankje</figcaption>
+      </figure>
+    </div>
+  </section>
+</div>
+
+<!-- KOOKBOEK -->
+<section class="blok">
+  <div class="wrap boek">
+    <div>
+      <div class="kicker">Wat je kunt verwachten</div>
+      <h2>De keuken van vroeger, in één boek</h2>
+      <p>Kom binnen in de keuken van vroeger. Een boek vol vertrouwde geuren, warme herinneringen en gerechten die nooit uit de mode raken: van stamppot en pannenkoeken tot ouderwetse stoof. Eerlijke, eenvoudige recepten die bewijzen dat liefde nog altijd het belangrijkste ingrediënt is.</p>
+      <p><b>Sta je op de lijst, dan hoor je het als eerste</b> zodra je het boek kunt bestellen.</p>
+    </div>
+    <ul class="feat">
+      <li><b>Ruim 60 familierecepten</b> die opa en oma echt elke week maken</li>
+      <li><b>Verhalen van vroeger</b> bij elk gerecht</li>
+      <li><b>Een mooi cadeau</b> voor jong en oud</li>
+      <li><b>Gewoon makkelijk:</b> geen poespas, wel lekker</li>
+    </ul>
+  </div>
+</section>
+
+<!-- RECEPTEN -->
+<section class="blok">
+  <div class="wrap">
+    <div class="center">
+      <div class="kicker">Bedankje voor je inschrijving</div>
+      <h2>Alvast drie recepten van oma</h2>
+      <p class="intro">Wie zich inschrijft krijgt meteen <i>Herfst bij Oma</i> in de mail: een voorproefje van het boek met een voorgerecht, een hoofdgerecht en een toetje.</p>
+    </div>
+    <div class="recepten">
+      <article class="rc" style="--c: var(--soep)">
+        <img src="img/soep-640.jpg" alt="Pompoen-wortelsoep" loading="lazy" width="640" height="640">
+        <div class="t"><div class="k">Voorgerecht</div><h3>Pompoen-wortelsoep</h3><p>"Kijk eens hoe geel."</p></div>
+      </article>
+      <article class="rc" style="--c: var(--hoofd)">
+        <img src="img/hoofd-640.jpg" alt="Hachee met abdijbok in een stoofpan" loading="lazy" width="640" height="640">
+        <div class="t"><div class="k">Hoofdgerecht</div><h3>Hachee met abdijbok</h3><p>"Het belangrijkste vind ik dat je met roomboter begint."</p></div>
+      </article>
+      <article class="rc" style="--c: var(--toetje)">
+        <img src="img/toetje-640.jpg" alt="Brusselse appelen met ijs" loading="lazy" width="640" height="640">
+        <div class="t"><div class="k">Toetje</div><h3>Brusselse appelen</h3><p>"Dat is zo'n simpel gerecht. En zo lekker."</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- OVER -->
+<section class="blok">
+  <div class="wrap over solo">
+    <!-- Zodra img/opa-oma.jpg er is: <figure><img src="img/opa-oma.jpg" alt="Opa en oma in de keuken"></figure> terugzetten -->
+    <div>
+      <div class="kicker">Over opa en oma</div>
+      <h2>Ouderwetse dingen zijn gewoon lekker</h2>
+      <p>Kleinzoon Ivar zette de camera aan terwijl oma kookte. Geen poespas, gewoon eten zoals het hoort, en al snel schreven duizenden mensen: "dit doet me denken aan vroeger."</p>
+      <blockquote>"Ik hou van makkelijk, maar het moet natuurlijk wel lekker zijn!"</blockquote>
+    </div>
+  </div>
+</section>
+
+
+<div class="wrap">
+  <section class="slot">
+    <div class="kicker">Zet de waterkoker aan</div>
+    <h2>Mis het kookboek niet</h2>
+    <p>Schrijf je in en hoor als eerste wanneer je het kookboek van oma kunt bestellen. Als bedankje krijg je meteen drie van haar herfstrecepten.</p>
+    <form class="signup" novalidate>
+      <div class="row">
+        <input type="email" name="email_address" required autocomplete="email" placeholder="jouw@email.nl" aria-label="E-mailadres">
+        <button type="submit">Zet mij op de lijst</button>
+      </div>
+      <p class="fine">Je krijgt mails over oma's kookboek. Afmelden kan altijd. <a href="privacy.html">Privacy</a></p>
+      <div class="msg" role="status"></div>
+    </form>
+  </section>
+
+  <footer>
+    <span>© 2026 My Story · Thuis bij Opa en Oma</span>
+    <span><a href="https://www.instagram.com/opa_en_oma" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.tiktok.com/@opa_en_oma" target="_blank" rel="noopener">TikTok</a> · <a href="https://www.facebook.com/opaenoma" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.youtube.com/@IvarvBeers" target="_blank" rel="noopener">YouTube</a></span>
+    <span><a href="privacy.html">Privacy</a> · <a href="mailto:info@thuisbijopaenoma.nl">info@thuisbijopaenoma.nl</a></span>
+  </footer>
+</div>
+
+<script>
+  // Kit (ConvertKit) form-ID; te vinden in Kit onder Grow > Landing Pages & Forms > jouw formulier > Embed.
+  const KIT_FORM_ID = "";
+
+  document.querySelectorAll("form.signup").forEach((form) => {
+    const input = form.querySelector("input");
+    const btn = form.querySelector("button");
+    const msg = form.querySelector(".msg");
+    const show = (cls, text) => { msg.className = "msg " + cls; msg.textContent = text; };
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      if (!input.checkValidity()) { show("err", "Vul een geldig e-mailadres in."); input.focus(); return; }
+      if (!KIT_FORM_ID) { show("ok", "Testmodus: er is nog geen Kit-formulier gekoppeld."); return; }
+      btn.disabled = true;
+      try {
+        const res = await fetch(`https://app.kit.com/forms/${KIT_FORM_ID}/subscriptions`, {
+          method: "POST",
+          headers: { Accept: "application/json" },
+          body: new FormData(form),
+        });
+        if (!res.ok) throw new Error(res.status);
+        form.querySelector(".row").style.display = "none";
+        form.querySelector(".fine").style.display = "none";
+        show("ok", "Bijna klaar! Open je mail en bevestig je adres. Dan sta je op de lijst en sturen we je meteen oma's recepten.");
+      } catch {
+        show("err", "Dat ging mis. Probeer het nog eens, of mail ons even.");
+      } finally {
+        btn.disabled = false;
+      }
+    });
+  });
+</script>
+</body>
+</html>
